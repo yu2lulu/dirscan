@@ -1,0 +1,30 @@
+author: jeffery.yu
+blog:  www.yu2lulu.xyz
+describe: a method to scan website
+dependent_on:  requests/multiprocessing/configparser/re/random
+
+
+config/
+    config.ini
+dict
+    ASP.txt
+    ASPX.txt
+    DIR.txt
+    JSP.txt
+    MDB.txt
+    PHP.txt
+dirscan.py
+
+
+Usage: dirscan.py [options]
+
+Options:
+  -h, --help            show this help message and exit
+  -u URL, --url=URL     【必选】设置目标url信息
+  -p POFNUM, --process=POFNUM
+                        设置进程数,默认为4
+  -d DICT, --dictory=DICT
+                        【必选】设置遍历字典
+
+Example:
+    python dirscan.py  -p 4 -u http://127.0.0.1  -d  [ASP.txt|ASPX.txt|DIR.txt|JSP.txt|MDB.txt|PHP.txt]
